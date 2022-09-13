@@ -1,6 +1,7 @@
 import Character from '../character';
 import Bowman from '../bowman';
 import Swordsman from '../swordsman';
+import Magician from '../magician';
 
 test('Character should create right character', () => {
   const character = new Character('testChar', 'Bowman');
@@ -28,7 +29,7 @@ test('Bowman should create character \'bowman\' with correct characteristics', (
 });
 
 test('Swordsman should create character \'bowman\' with correct characteristics', () => {
-  const swordsman = new Swordsman('Tom');
+  const swordsman = new Swordsman('Jack');
   const jack = {
     health: 100,
     level: 1,
@@ -39,4 +40,18 @@ test('Swordsman should create character \'bowman\' with correct characteristics'
   };
 
   expect(swordsman).toEqual(jack);
+});
+
+test('Magician should create character \'Magician\' with correct characteristics', () => {
+  const magician = new Magician('Oleg');
+  const oleg = {
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+    name: 'Oleg',
+    type: 'Swordsman',
+  };
+
+  expect(magician).toEqual(oleg);
 });
