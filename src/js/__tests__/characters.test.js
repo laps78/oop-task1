@@ -3,21 +3,22 @@ import Bowman from '../bowman';
 import Swordsman from '../swordsman';
 import Magician from '../magician';
 import Undead from '../undead';
+import Zombie from '../zombie';
 
 test('Character should create right character', () => {
-  const character = new Character('testChar', 'Bowman');
-  const testChar = {
+  const personConstrucor = new Character('testChar', 'Bowman');
+  const personName = {
     name: 'testChar',
     type: 'Bowman',
     level: 1,
     health: 100,
   };
-  expect(character).toEqual(testChar);
+  expect(personConstrucor).toEqual(personName);
 });
 
 test('Bowman should create character \'bowman\' with correct characteristics', () => {
-  const bowman = new Bowman('Tom');
-  const tom = {
+  const personConstrucor = new Bowman('Tom');
+  const personName = {
     health: 100,
     level: 1,
     attack: 25,
@@ -26,12 +27,12 @@ test('Bowman should create character \'bowman\' with correct characteristics', (
     type: 'Bowman',
   };
 
-  expect(bowman).toEqual(tom);
+  expect(personConstrucor).toEqual(personName);
 });
 
 test('Swordsman should create character \'bowman\' with correct characteristics', () => {
-  const swordsman = new Swordsman('Jack');
-  const jack = {
+  const personConstrucor = new Swordsman('Jack');
+  const personName = {
     health: 100,
     level: 1,
     attack: 40,
@@ -40,12 +41,12 @@ test('Swordsman should create character \'bowman\' with correct characteristics'
     type: 'Swordsman',
   };
 
-  expect(swordsman).toEqual(jack);
+  expect(personConstrucor).toEqual(personName);
 });
 
 test('Magician should create character \'Magician\' with correct characteristics', () => {
-  const magician = new Magician('Oleg');
-  const oleg = {
+  const personConstrucor = new Magician('Oleg');
+  const personName = {
     health: 100,
     level: 1,
     attack: 10,
@@ -54,19 +55,33 @@ test('Magician should create character \'Magician\' with correct characteristics
     type: 'Magician',
   };
 
-  expect(magician).toEqual(oleg);
+  expect(personConstrucor).toEqual(personName);
 });
 
 test('Undead should create character \'Undead\' with correct characteristics', () => {
-  const undead = new Undead('Carl');
-  const carl = {
+  const personConstrucor = new Undead('Carl');
+  const personName = {
     health: 100,
     level: 1,
-    attack: 10,
-    defence: 40,
+    attack: 25,
+    defence: 25,
     name: 'Carl',
     type: 'Undead',
   };
 
-  expect(undead).toEqual(carl);
+  expect(personConstrucor).toEqual(personName);
+});
+
+test('Zombie should create character \'Zombie\' with correct characteristics', () => {
+  const personConstrucor = new Zombie('Hans');
+  const personName = {
+    health: 100,
+    level: 1,
+    attack: 40,
+    defence: 10,
+    name: 'Hans',
+    type: 'Zombie',
+  };
+
+  expect(personConstrucor).toEqual(personName);
 });
