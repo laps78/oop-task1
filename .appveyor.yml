@@ -10,8 +10,8 @@ cache: node_modules  # кеширование
 
 install:
   - npm install # команда установки зависимостей
-  - npm audit fix --force # команда иправления зависимостей
-  
+  - npm audit fix # команда иправления зависимостей
+
 build: off  # отключаем встроенную в appveyor систему сборки
 
 build_script:
