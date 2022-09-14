@@ -2,6 +2,7 @@ import Character from '../character';
 import Bowman from '../bowman';
 import Swordsman from '../swordsman';
 import Magician from '../magician';
+import Undead from '../undead';
 
 test('Character should create right character', () => {
   const character = new Character('testChar', 'Bowman');
@@ -50,8 +51,22 @@ test('Magician should create character \'Magician\' with correct characteristics
     attack: 10,
     defence: 40,
     name: 'Oleg',
-    type: 'Swordsman',
+    type: 'Magician',
   };
 
   expect(magician).toEqual(oleg);
+});
+
+test('Undead should create character \'Undead\' with correct characteristics', () => {
+  const undead = new Undead('Carl');
+  const carl = {
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+    name: 'Carl',
+    type: 'Undead',
+  };
+
+  expect(undead).toEqual(carl);
 });
