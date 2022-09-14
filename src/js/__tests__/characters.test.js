@@ -4,7 +4,7 @@ import Swordsman from '../swordsman';
 import Magician from '../magician';
 import Undead from '../undead';
 import Zombie from '../zombie';
-import Daemon from "../daemon";
+import Daemon from '../daemon';
 
 test('Character should create right character', () => {
   const personConstrucor = new Character('testChar', 'Bowman');
@@ -97,3 +97,6 @@ test('Daemon should create character \'Daemon\' with correct characteristics', (
     name: 'Phil',
     type: 'Daemon',
   };
+
+  expect(personConstrucor).toEqual(personName);
+});
